@@ -1,0 +1,19 @@
+{
+  "name": "akameco-bot",
+  "description": "foxtail bot",
+  "main": "index.js",
+  "dependencies": {
+    "foxtail": "^0.0.6"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "build": "babel src --out-dir plugins",
+    "watch": "babel src --out-dir plugins --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "akameco",
+  "license": "MIT"
+}
