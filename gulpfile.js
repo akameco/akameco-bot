@@ -7,6 +7,7 @@ var concat = require('gulp-concat');
 var webserver = require('gulp-webserver');
 var del = require('del');
 var browserify = require('gulp-browserify');
+var concatCss = require('gulp-concat-css');
 
 gulp.task('serve', function() {
   gulp.src('.')
@@ -23,7 +24,7 @@ gulp.task('clean', function(cb) {
 gulp.task("style", function() {
   gulp.src("src/**/*.scss")
     .pipe(sass())
-    .pipe(concat('style.css'))
+    .pipe(concatCss('style.css'))
     .pipe(gulp.dest("build/style"));
 });
 
