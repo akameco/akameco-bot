@@ -3,7 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <title>akameco bot</title>
+  <link rel="stylesheet" href="./build/style/style.css" type="text/css">
 </head>
 <body>
+  <div class="wrap">
+    <header class="">
+      <h1>akameco bot</h1>
+    <div class="bot-desc">
+      @akamecoに実装されているBOTの機能集。
+      個々の機能はBOT作成モジュール<a href="https://github.com/akameco/foxtail">foxtail</a>を使用。
+    </div>
+    </header>
+
+  <div class="plugin">
+    <h2 class="plugin-name">update_name</h2>
+    <div class="plugin-desc">
+      改名する
+      <pre>
+        <code class="javascript">
+export default (fox) => {
+  fox.add((res) => {
+    if(/.*\(@akameco\)$/.test(res.text)) {
+      let name = res.text.match(/(.*)\(@akameco\)/)[1]
+      if(name.length > 20) {
+        res.reply('20文字以上の名前は設定不可能なんっ！')
+        return
+      }
+      fox.twit.post('account/update_profile', {name: name}, () => {
+        res.reply(`${name}に改名しました`)
+      })
+    }
+  })
+}
+        </code>
+      </pre>
+    </div>
+  </div>
+
+  <div class="plugin">
+    <h2 class="plugin-name">おるかｗ</h2>
+    <div class="plugin-desc">
+      "あかめ"、"赤目"、"赤芽"＋"おるか"に「おるでｗ」と反応。それだけ。
+      <pre>
+      <code class="javascript">
+export default (fox) => {
+  fox.add((res) => {
+    if(/^(赤目|あかめ|赤芽)おるか/.test(res.text)) {
+      res.reply('おるでw')
+    }
+  })
+}
+      </code>
+      </pre>
+    </div>
+  </div>
+  <div class="plugin">
+    <h2 class="plugin-name">開眼</h2>
+    <div class="plugin-desc">
+    開眼する
+      <pre>
+        <code class="javascript">
+export default (fox) => {
+  fox.add((res) => {
+    let text = "( ✹‿✹ )開眼だァーーーーーーーーーーー！！！！！！！！！！！（ﾄｩﾙﾛﾛﾃｯﾃﾚｰｗｗｗｗｗｗﾃﾚﾃｯﾃﾃｗｗｗｗﾃﾃｰｗｗｗ）ｗｗｗﾄｺｽﾞﾝﾄｺﾄｺｼﾞｮﾝｗｗｗｽﾞｽﾞﾝｗｗｗｗｗ（ﾃﾃﾛﾘﾄﾃｯﾃﾛﾃﾃｰ"
+    if(/^@akameco 開眼/.test(res.text)) res.reply(text)
+  })
+}
+        </code>
+      </pre>
+    </div>
+  </div>
+  </div>
+  <footer class="footer">
+    2015 © akameco
+  </footer>
+  <script type="text/javascript" src="./build/js/bundle.js"></script>
 </body>
 </html>

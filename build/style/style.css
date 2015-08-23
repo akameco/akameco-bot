@@ -1,0 +1,32 @@
+@import url(../../node_modules/normalize.css/normalize.css);
+@import url(../../node_modules/highlight.js/styles/monokai.css);
+body {
+  background: #4FC3F7 none repeat scroll 0% 0%;
+  color: white; }
+
+.wrap {
+  padding: 0 auto;
+  width: 980px;
+  margin: 0 auto; }
+
+header {
+  text-align: center;
+  width: 100%;
+  padding: 3em; }
+  header h1 {
+    font-weight: 300px;
+    margin: 0; }
+
+.bot-desc {
+  text-align: center; }
+
+.plugin {
+  margin: 10px;
+  padding: 0 10px 5px;
+  border: thin solid #eee;
+  display: block; }
+  .plugin pre {
+    margin: 0; }
+
+.plugin-name {
+  border-bottom: white 1px solid; }
