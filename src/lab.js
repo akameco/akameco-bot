@@ -10,7 +10,6 @@ export default fox => {
         for(let e in data) {
           arr.push(`${e}研${data[e]}人`)
         }
-        console.log(arr)
         res.reply(arr.join("\n"))
       })
     }
