@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = function (fox) {
   fox.add(function (res) {
     var text = "( ✹‿✹ )開眼だァーーーーーーーーーーー！！！！！！！！！！！（ﾄｩﾙﾛﾛﾃｯﾃﾚｰｗｗｗｗｗｗﾃﾚﾃｯﾃﾃｗｗｗｗﾃﾃｰｗｗｗ）ｗｗｗﾄｺｽﾞﾝﾄｺﾄｺｼﾞｮﾝｗｗｗｽﾞｽﾞﾝｗｗｗｗｗ（ﾃﾃﾛﾘﾄﾃｯﾃﾛﾃﾃｰ";
-    if (/^@_zxa 開眼/.test(res.text)) res.reply(text);
+    if (/^@akameco 開眼/.test(res.text)) res.reply(text);
   });
 };
 
