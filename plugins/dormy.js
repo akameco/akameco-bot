@@ -23,7 +23,13 @@ exports['default'] = function (fox) {
         var json = JSON.parse(body).dinner.map(function (x) {
           return '☆' + x;
         });
-        var str = "今日の夕食は\n" + json.join('\n');
+        var str = '';
+        if (json.length === 0) {
+          str = '本日食堂はお休みです';
+        } else {
+          str = "今日の夕食は\n" + json.join('\n');
+        }
+
         res.reply(str);
       });
     }

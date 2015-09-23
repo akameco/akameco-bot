@@ -8,7 +8,13 @@ export default fox => {
       const url = `http://www.いろはす.xyz/api/v1/search?type=a1&date=${d}`
       request(url, (err, response, body) => {
         const json = JSON.parse(body).dinner.map(x => '☆' + x)
-        const str = "今日の夕食は\n" + json.join('\n')
+        let str = ''
+        if (json.length === 0) {
+          str = '本日食堂はお休みです'
+        } else {
+          str = "今日の夕食は\n" + json.join('\n')
+        }
+
         res.reply(str)
       })
     }
