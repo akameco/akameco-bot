@@ -8,7 +8,7 @@ export default fox => {
         const data = JSON.parse(body)
         const arr = []
         for(let e in data) {
-          arr.push(`${e}研${data[e]}人`)
+          arr.push(`${e} ${data[e]}`)
         }
         console.log(arr)
         res.reply(arr.join("\n"))

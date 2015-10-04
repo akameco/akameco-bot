@@ -18,7 +18,7 @@ exports['default'] = function (fox) {
         var data = JSON.parse(body);
         var arr = [];
         for (var e in data) {
-          arr.push(e + '研' + data[e] + '人');
+          arr.push(e + ' ' + data[e]);
         }
         console.log(arr);
         res.reply(arr.join("\n"));
