@@ -21,7 +21,7 @@ exports['default'] = function (fox) {
           arr.push(e + ' ' + data[e]);
         }
         console.log(arr);
-        res.reply(arr.join("\n"));
+        res.reply("\n" + arr.join("\n"));
       });
     }
   });
