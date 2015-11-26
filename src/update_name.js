@@ -1,7 +1,7 @@
-export default (fox) => {
-  fox.add((res) => {
+export default fox => {
+  fox.add(res => {
     if(/.*\(@akameco\)$/.test(res.text)) {
-      let name = res.text.match(/(.*)\(@akameco\)/)[1];
+      const name = res.text.match(/(.*)\(@akameco\)/)[1];
       if(name.length > 20) {
         res.reply('20文字以上の名前は設定不可能なんっ！')
         return;
