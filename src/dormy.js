@@ -5,7 +5,7 @@ export default fox => {
   fox.add(res => {
     if(res.text === '今日の飯') {
       const d = moment().format('YYYY-MM-DD')
-      const url = `http://www.いろはす.xyz/api/v1/search?type=a1&date=${d}`
+      const url = `http://マジ天使すぎるあやせたん.xyz:8081/api/v1/search?type=a1&date=${d}`
       request(url, (err, response, body) => {
         const json = JSON.parse(body).dinner.map(x => '☆' + x)
         let str = ''
