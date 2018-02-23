@@ -1,5 +1,7 @@
 # akameco-bot
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/akameco/akameco-bot.svg)](https://greenkeeper.io/)
+
 foxtailを使ったBOT
 
 - [akameco/foxtail](https://github.com/akameco/foxtail)
